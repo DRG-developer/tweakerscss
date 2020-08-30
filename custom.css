@@ -1,0 +1,533 @@
+:root{
+	--theme-color: #474747;
+  	--accent-color-selected: #333333d6;
+	--accent-color: #0e589a;
+
+}
+
+
+/************************************************
+ *                                              *
+ *                 ALGEMEEN                     *
+ *                                             	*
+ ************************************************/
+
+
+/* maak de zoekbalk minder opvallend */
+#top, #top #searchbar, #search #true {
+	background-image: inherit !important;
+	background-color: var(--theme-color);
+	border: inherit !important;
+}
+
+#search #mainSearch .keyword .text:hover, #search #mainSearch .keyword .text:focus {
+	border-bottom: 3px solid var(--accent-color);
+}
+
+
+#search input.text {
+	box-shadow: inherit !important;
+}
+
+#searchbar #search #mainSearch .submit {
+	border-left: 0px !important;
+}
+
+#search #mainSearch .keyword .text {
+	background-color: var(--theme-color);
+	color: #ffffff
+}
+
+#search #mainSearch {
+	border: 0px;
+	width: 350px;
+}
+
+.keywordSearch input.submit {
+	background: var(--theme-color) url("https://tweakers.net/g/if/v3/framework/menu_icons_v2.png") no-repeat 6px -106px !important;
+	width: 38px;
+}
+
+
+/*****/
+
+/*			verberg de tracker */
+body.hasTracker #tracker {
+	visibility: hidden !important;
+	width: 0px !important;
+  	height: 0px !important;
+	left: 0px !important;
+	display: none !important;
+ 
+}
+
+
+
+/***************************************************************************/
+
+
+
+
+
+
+/************************************************
+ *                                    			*
+ *            		  NAVBAR           			*
+ *                                    			*    
+ ************************************************/
+
+#top #menuwrapper #menubar {
+	background-image: inherit !important;
+	background-color: #474747d6;
+	-webkit-backdrop-filter: blur(9px);
+	border: 0px !important;
+}
+/* fix de hover kleuren weg van rood*/
+#logo:hover, #menu  ul  li:hover {
+	background-color: var(--accent-color-selected);
+	border-bottom: 3px solid var(--accent-color);
+}
+
+a:hover {
+	color: inherit;
+  	text-decoration: none;
+	border-bottom: 3px solid var(--accent-color) !important;
+}
+
+/*****/
+
+/* fix dubbele bottom border bij notifs en vergelijk lijst */
+#userbar li.messages a, #userbar li.compare a, #userbar li.notifications a, #userbar li.display a{
+	border-bottom: none !important;
+}
+
+/* fix de dropdown */
+#menu  ul  li.more.dropdown:active,  {
+	background-color: var(--accent-color-selected);  
+}
+
+.dropdown li:hover {
+	font-weight: 550;
+}
+
+#userbar .dropdown .dropdown > div {
+	left: 102%;
+    border-left: 3px solid #ffffff;
+}
+
+.dropdown ul li:hover, .dropdown ul li.active, #menu .dropdown ul li:hover {
+	background-image: none;
+  	background-color: var(--accent-color-selected);
+}
+
+#userbar .dropdown .more a.trigger {
+	background: url("https://tweakers.net/g/icons/arrow_right_white.png") no-repeat right center;
+}
+
+#menu > ul > li.more.dropdown > a.trigger::after {
+	background: url("https://tweakers.net/g/hidpi/icons/chevron_white.svg") no-repeat center/6px 10px;
+	transform: rotate(-90deg)
+}
+
+li.dropdown ul, dropdown ul li:hover, .dropdown ul li.active, #menu .dropdown ul li:hover {
+	background-color: var(--theme-color);
+  	background-image: none;
+}
+/*					zwart is niet leesbaar */
+li.dropdown ul li, .dropdown li, .dropdown li > a {
+	color: #ffffff !important;
+	border: none;
+}
+/*             		maak de dropdown dezelfde kleur als de navbar*/
+#menu > ul > li.more.dropdown, #menu > ul > li.more.dropdown > a.trigger,  .dropdown ul{
+	background-color: var(--theme-color);
+  	color: #ffffff;
+  	border: none;
+}
+/*               	witte deviders zijn lelijk, maak ze zwart*/
+#menu .dropdown li.divider {
+	border-color: #000000 !important;
+}
+/*****/
+
+
+/****************************************************************************/
+
+
+
+#contentArea {
+	padding: 20px;
+	background-color: #ffffff !important;
+	border-radius: 5px;
+}
+
+#bottom div.hr {
+	height: 0px;
+}
+
+body {
+	background-color: var(--theme-color);
+}
+
+body.hasTracker, html.js {
+	margin-left: 0px !important;
+}
+
+
+
+
+
+
+/****************************************
+ *										*
+ * 			 Vraag en Aanbod			*
+ *										*
+ ****************************************/
+/* verberg de rechter kolom */
+
+.vaPortalColumnRight {
+	display: none;
+	width: 0px;
+  	height: 0px;
+}
+/*****/
+
+/* 			maak de kolom volle breedte */
+.vaPortalColumnLeft {
+	float: inherit;
+  	text-align: center;
+ 	width: auto;
+}
+
+
+
+/***************************************************************************/
+
+
+/**************************************** 
+ *										*
+ * 				FRONT PAGE 				*
+ *										*
+ ****************************************/	
+
+/* verbergt het nieuws type circeltje */
+.type .contentIcon, .type .promo, .type .review {
+	background-image: none !important;
+
+}
+
+table.highlights .type {
+	width: 0px;
+}
+/* */
+
+/*			bij de inbetween news afbeelding wil je geen border bij hover*/
+.ankeiler .meta > div > a.related:hover span.link {
+	text-decoration: none !important;
+}
+
+/* 			verbergt de 2de kolom (banen, calender, events, aanraders)*/
+#jobs, #calendarEvents, #news .dailyHeadlines .headlines tbody .download, .secondColumn.frontpage, #community{
+	display: none;
+	height: 0px;
+	width: 0px;
+}
+
+
+/* 			maakt het nieuws breder*/
+.mainColumn.frontpage, table.highlights{
+	width: 100%;
+}
+
+/* 			maakt de review afbeeldingen net zo breed als het nieuws */
+.ankeiler.medium {
+	max-width: none;
+  	width: 100%;
+	height: inherit;
+}
+/* 			maakt de comment count leesbaar */
+.ankeiler > a.commentCount {
+	color: #ffffff !important;
+  	font-weight: 550;
+}
+
+
+/* 			maakt de rode headers zwart */
+h1, h2, .heading, .subHeading {
+	color: #000000;	
+}
+/***************************************************************8*/
+
+/****************************************
+ *										*
+ * 					Forum				*
+ *										*
+ ****************************************/
+
+/* sorteer de onderwerpen van klein naar groot, verwijder de kleinste, verwijder de underline 2*/
+.tagcloud .w1 {
+	display: none;
+	width: 0px;
+  	height: 0px;
+}
+.tagcloud .w2 {
+	display: none;
+  	width: 0px;
+  	height: 0px;
+}
+
+.tagcloud .w3{
+	order: 6;
+	font-size: 15px;
+	color: #4199e6;
+}
+.tagcloud .w4{
+	order: 5;
+	font-size: 15px;
+	color: #4199e6;
+}
+.tagcloud .w5{
+	order: 4;
+	font-size: 15px;
+	color: #4199e6;
+}
+.tagcloud .w6{
+	order: 3;
+  	font-size: 15px;
+	color: #4199e6;
+}
+.tagcloud .w7{
+	order: 2;
+  	font-size: 15px;
+	color: #4199e6;
+}
+.tagcloud .w8{
+	order: 1;
+  	font-size: 15px;
+	color: #4199e6;
+}
+
+.tagcloud {
+	display: flex;
+	flex-flow : wrap;
+}
+
+.tagcloud a:hover {
+	text-decoration: none;
+}
+
+/*****/
+
+
+
+/* 			maak de forum categorien wit, en 1px donkere border */
+#content .listing tbody tr td {
+	background-image: none;
+  	background-color: #ffffff;
+  	border-top: none;
+  	border-bottom: 1px solid #d7d7d7;
+      
+}
+
+/* fix de zoekbalk bij het forum */
+#search .options {
+	background-color: var(--theme-color);
+  	border-right: 0px;
+}
+
+.fancySelect span {
+	color: #ffffff;
+}
+
+.keywordSearch {
+	background-color: var(--theme-color);
+}
+/*****/
+
+/* 			maak de >> 1 enkele > */
+.bulletSeparatedList.breadcrumb > li::before {
+	content: ">";
+    top: -0.5px;
+}
+
+
+
+/* 			verwijder de "wie zijn de mods" sectie */
+#title p.mods {
+	width: 0px;
+  	height: 0px;
+  	display: none;
+}
+ /* 		maak de crew zelfde kleur als gewone gebruikers */
+.crew, a.crew:hover {
+	color: #000000;
+}
+
+
+/* verwijder de "echte thumbnails" melding */
+.resizewarning .warningTxt {
+	display: none;
+	width: 0px;
+	height: 0px;
+}
+
+.resizewarning img.rml.resized {
+	border: 0px;
+}
+/*****/
+
+/*		 	verwijder "reset laatste bezoek tijd" */
+#forum_tabs .pageTabs ul #tab_reset {
+	display: none;
+	width: 0px;
+	height: 0px;
+}
+
+
+/* de tabs wat mooier maken*/
+.pageTabs li.active {
+	font-weight: 550;
+}
+
+.pageTabs li.active a, .pageTabs li.active a:hover {
+	color: #000000;
+  	border-left: 1px #9d9d9d solid;
+	border-top: 1px #9d9d9d solid;
+	border-right: 1px #9d9d9d solid;
+}
+
+.pageTabs li {
+	background-image: none;
+	background-color: #f2f2f2;
+	border-left: none;
+	border-right: none;
+	border-top: none;
+	margin-left: 1px;
+}
+/*****/
+
+/********************************************************/
+
+/************************************
+ *									*
+ * 				algemeen			*
+ *									*
+ ************************************/
+
+
+
+/* verbergt een hele hoop aandacht trekkerij onderaan*/
+#bottom .wvhj, #bottom .social, #bottom #ticker  {
+	display: none;
+}
+
+#bottom #about .bulletSeparatedList {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#bottom #about {
+	height: 100px;
+}
+
+#bottom a:hover {
+	color: #ffffff;
+}
+
+/*****/
+
+/* centreerd header en voegt lijn toe */
+#header {
+	text-align: center;
+	border-bottom: 5px solid #0e589a;
+}
+
+.settingsSideBar #categoryBrowser.sidebar li.more.active {
+	background-image: none;
+  	background-color: var(--accent-color-selected)
+}
+/*****/
+
+
+
+/************************************
+ *									*
+ * 			artikelen				*
+ *									*
+ ************************************/
+
+/* verwijder de facebook en twitter liks en verplaats de commentcount omhoog */
+.shareImage {
+  	display: none;
+	width: 0px;
+    height: 0px;
+}
+
+#articleMeta .meta p .commentCount {
+	position: relative;
+	top: -27px;
+	float: right;
+	background-image: none;
+}
+/*****/
+
+/* voorkomt dat knoppen als "beoordeel artikel" een 3px blauwe onder border krijgen */
+.ctaButton:hover {
+	border-bottom: 1px solid !important;
+}
+
+/* verwijderd de text decoratie op dubbele streep te voorkomen*/
+#articleMeta .meta p a:hover {
+	text-decoration: none !important;
+}
+
+
+
+
+
+/********************************
+ *								*
+ * 		instellingen			*	
+ *								*
+ ********************************/
+
+
+
+/* 			creer een aanwijzing dat het een sub categorie is bij instellingen */
+.workexperience a::before, .skills a::before, .pendingJobOffers a::before, .customcss a::before{
+	content: "L ";
+	top: -4px;
+	position: relative;
+}
+
+/* 			iets meer ruimte tussen het pijltje en de text */
+.settingsSideBar #categoryBrowser.sidebar li.more {
+	background-position: 180px 10px;
+}
+
+/* maak het wat breder zodat het allemaal past, reduceer de padding */
+#categoryBrowser.sidebar {
+	width: 205px;
+}
+
+.settingsSideBar {
+	min-width: 210px;
+}
+
+#categoryBrowser {
+	padding: 5px;
+}
+/*****/
+
+/* 			maakt de "instellingen zijn opgeslagen" iets subtieler */
+.bar.notice {
+	background: #ffffff;
+	border-radius: 10px;
+	border: 1px solid #000000;
+	text-align: center;
+}
+
+
+
+/************************************************************/
