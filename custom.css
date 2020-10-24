@@ -200,6 +200,11 @@ body.hasTracker, html.js {
 }
 
 
+#listingContainer .headerContent.right {
+    left: 0;
+}
+
+
 
 /***************************************************************************/
 
