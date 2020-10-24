@@ -204,6 +204,36 @@ body.hasTracker, html.js {
     left: 0;
 }
 
+/* fix de lelijke positie van product aanbieden*/
+
+#listingContainer .headerContent {
+    position: relative;
+    top: -25px;
+    height: 10px;
+}
+
+#listingContainer .headerContent.right {
+    left: 0;
+}
+
+/******/
+
+/* maak de categorie browser net een beetje beter m.b.t whitespace*/
+#categoryBrowser {
+	padding: 1px;
+  	width: 960px;
+}
+
+#categoryBrowser .sublist {
+	left: 295px;
+	top: 1px;
+}
+
+#categoryBrowser div {
+	width: 290px;
+}
+
+/******/
 
 
 /***************************************************************************/
