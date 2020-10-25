@@ -214,6 +214,10 @@ body.hasTracker, html.js {
     left: 0;
 }
 
+#listingContainer .headerContent.right > .listOptions {
+    margin-left: 10px;
+}
+
 /*       fix de overlappende "laatst gebruikte filter" en positie van product aanbieden */
 
 #storedFilterSet {
