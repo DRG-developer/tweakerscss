@@ -214,6 +214,13 @@ body.hasTracker, html.js {
     left: 0;
 }
 
+/*       fix de overlappende "laatst gebruikte filter" en positie van product aanbieden */
+
+#storedFilterSet {
+	margin-bottom: 34px;
+}
+
+
 /******/
 
 /* maak de categorie browser net een beetje beter m.b.t whitespace*/
